@@ -1,0 +1,46 @@
+.form {
+  height: 45px;
+  position: relative;
+
+  &__input {
+    width: 80%;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #E9E9E9;
+    height: 100%;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    padding-left: 20px;
+  }
+
+  &__input::placeholder {
+    color: #B4B4B4;
+  }
+
+  &__input:focus {
+    border: 1px solid @blue;
+    box-shadow: 0px 2px 5px rgba(76, 165, 255, 0.25);
+  }
+
+  &__submit {
+    border: none;
+    background: @aquamarine;
+    cursor: pointer;
+    padding: 0;
+    width: 20%;
+    height: 45px;
+    font-size: 20px;
+    color: @white;
+    border-radius: 0 30px 30px 0;
+  }
+
+  @media only screen and (max-width : 850px) {
+    &__input {
+      width: 65%;
+    }
+
+    &__submit {
+      width: 35%;
+      font-size: 16px;
+    }
+  }
+}

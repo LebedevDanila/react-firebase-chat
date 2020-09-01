@@ -1,0 +1,38 @@
+.message {
+  margin-bottom: 12px;
+  display: flex;
+
+  &-text {
+    padding: 15px;
+    background: @aquamarine;
+    box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
+    color: @white;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 12px 12px 12px 0px;
+    max-width: 400px;
+    line-height: 21px;
+    word-wrap: break-word;
+  }
+
+  &-date {
+    font-size: 13px;
+    line-height: 14px;
+    opacity: 0.45;
+    margin-top: 7px;
+  }
+}
+
+.message.me {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.message-text.me {
+  border: 2px solid @silver;
+  box-shadow: none;
+  background: @white;
+  color: @black;
+  border-radius: 12px 12px 0 12px;
+}
