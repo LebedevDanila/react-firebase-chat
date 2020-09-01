@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * В компонент сообщения мы получаем статус нашего пользователя, а так же текст сообщения
+ * @param {user} user - статус пользователя
+ * @param {text} text - текст сообщения
+ */
 function Message({user, text}) {
   return (
     <div className={`message ${user}`}>

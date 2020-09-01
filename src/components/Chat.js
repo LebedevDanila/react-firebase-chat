@@ -7,6 +7,9 @@ function Chat() {
   const [fieldValue, setFieldValue] = useState('')
   const [uid, setUid] = useState('')
 
+  /**
+   * Авторизация анонимного пользователя в чат, при помощи firebase
+   */
   const login = () => {
     auth.onAuthStateChanged(async (user) => {
       if(!user) {
@@ -17,6 +20,9 @@ function Chat() {
     });
   }
 
+  /**
+   * Получение всех сообщений их базы данных и так же отслеживание их
+   */
   const fetchMessages = () => {
     db.ref("messages").on("value", snapshot => {
       let chat = [];
@@ -28,12 +34,18 @@ function Chat() {
     });
   }
 
+  /**
+   * Использование хука useEffect для вызова авторизации и сообщений, после отрисовки комопнента без ошибок
+   */
   useEffect(() => {
     login();
 
     fetchMessages();
   }, []);
 
+  /**
+   * Отправка нового сообщения в базу данных
+   */
   const handlerSubmit = async (e) => {
     e.preventDefault();
 
