@@ -26,6 +26,7 @@
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.0",
+    "mini-css-extract-plugin": "^0.11.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -36,7 +37,9 @@
       "@babel/preset-env",
       "@babel/preset-react"
     ],
-    "plugins": ["@babel/plugin-transform-runtime"]
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
   },
   "bin": {
     "minimal-reactjs-boilerplate": "./bin/start.js"
