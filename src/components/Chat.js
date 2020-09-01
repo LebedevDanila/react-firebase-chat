@@ -37,7 +37,10 @@ function Chat() {
   const handlerSubmit = async (e) => {
     e.preventDefault();
 
-    if(!fieldValue) return false;
+    if(!fieldValue) {
+      alert('Введите сообщение!');
+      return false;
+    }
 
     await db.ref("messages").push({
       createdBy: uid,
