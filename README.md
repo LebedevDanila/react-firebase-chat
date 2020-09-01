@@ -1,1 +1,1 @@
-# minimal-reactjs-boilerplate
+# wincorp test assignment 
