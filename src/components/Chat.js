@@ -14,8 +14,6 @@ function Chat() {
       }
 
       setUid(auth.currentUser.uid)
-
-      console.log(auth.currentUser.uid)
     });
   }
 
